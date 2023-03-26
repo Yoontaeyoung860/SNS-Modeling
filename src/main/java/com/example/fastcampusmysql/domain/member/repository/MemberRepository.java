@@ -1,6 +1,7 @@
 package com.example.fastcampusmysql.domain.member.repository;
 
 import com.example.fastcampusmysql.domain.member.entity.Member;
+<<<<<<< HEAD
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
@@ -47,12 +48,19 @@ public class MemberRepository {
     return Optional.ofNullable(member);
     }
 
+=======
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class MemberRepository {
+>>>>>>> 4cc0908d1841e642e3036904c0f5fe2859a3e020
 
     public Member save(Member member) {
         /*
         member id를 보고 갱신 또는 삽입을 정함.
         반환값은 id를 담아서 반환한다.
          */
+<<<<<<< HEAD
         if (member.getId() == null) {
             return insert(member);
         }
@@ -82,5 +90,8 @@ public class MemberRepository {
         // TODO: implemented
         return member;
 
+=======
+     return Member.builder().build();
+>>>>>>> 4cc0908d1841e642e3036904c0f5fe2859a3e020
     }
 }
